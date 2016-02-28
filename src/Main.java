@@ -1,12 +1,11 @@
 import java.io.IOException;
+import java.io.UncheckedIOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-
-import static java.nio.file.Paths.get;
 
 public class Main {
 
@@ -42,12 +41,14 @@ public class Main {
                 }
             } catch (IOException e) {
                 System.out.println("No such file: " + e.toString());
+            } catch (UncheckedIOException e) {
+                System.out.println("Cannot read file " + filename + ": check type of file and charset");
             }
         }
 
-        long endTime = System.nanoTime();
-        long duration = (endTime - startTime);
-        System.out.println("It takes " + duration/1000000 + " ms");
+//        long endTime = System.nanoTime();
+//        long duration = (endTime - startTime);
+//        System.out.println("It takes " + duration/1000000 + " ms");
 
     }
 }
