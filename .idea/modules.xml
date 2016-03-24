@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/mygrep.iml" filepath="$PROJECT_DIR$/mygrep.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mygrepmvn.iml" filepath="$PROJECT_DIR$/mygrepmvn.iml" />
     </modules>
   </component>
 </project>
